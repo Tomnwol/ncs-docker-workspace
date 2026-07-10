@@ -65,6 +65,8 @@ The container starts in `/workspace` (the NCS SDK) and prints ready-to-run comma
 | `BUILD_DIR` | `/apps/hello_world/build` | Build output |
 | `DEFAULT_BOARD` | `nrf9160dk/nrf9160/ns` | Board passed to `west build` |
 
+For more informations about the board name, check [nordic documentation](https://nrfconnectdocs.nordicsemi.com/ncs/latest/nrf/app_dev/device_guides/nrf91/index.html).
+
 ### 3. Build and flash
 
 Inside the container:
