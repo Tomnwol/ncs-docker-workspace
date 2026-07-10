@@ -1,0 +1,18 @@
+name: nordic-v2-9-2
+
+include:
+  - path: ../shared/docker-compose.base.yml
+    env_file:
+      - .env
+
+services:
+  ncs:
+    build:
+      context: ..
+      dockerfile: shared/Dockerfile
+      args:
+        TOOLCHAIN_IMAGE: ghcr.io/nrfconnect/sdk-nrf-toolchain:${NCS_VERSION}
+        NCS_MANIFEST_REVISION: ${NCS_VERSION}
+    image: nordic-ncs:${NCS_VERSION}
+    volumes:
+      - ./apps:/apps:rw

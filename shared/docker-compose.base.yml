@@ -1,0 +1,18 @@
+services:
+  ncs:
+    entrypoint: ["/bin/bash", "-lc"]
+    stdin_open: true
+    tty: true
+    privileged: true
+    working_dir: /workspace
+    environment:
+      ACCEPT_JLINK_LICENSE: "1"
+      NCS_VERSION: ${NCS_VERSION}
+      NCS_MANIFEST_REVISION: ${NCS_VERSION}
+      WORKSPACE_DIR: /workspace
+      APPS_DIR: /apps
+      DEFAULT_BOARD: ${DEFAULT_BOARD}
+    volumes:
+      - /dev:/dev
+      - /run/udev:/run/udev:ro
+      - ../shared:/shared:ro

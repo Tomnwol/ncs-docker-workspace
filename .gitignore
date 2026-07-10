@@ -1,0 +1,9 @@
+**/build/
+**/.west/
+**/nrf/
+**/zephyr/
+**/modules/
+**/bootloader/
+**/nrfxlib/
+**/tools/
+**/test/
