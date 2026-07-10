@@ -22,7 +22,7 @@ Each NCS version gets its own pre-baked Docker image. Application sources live o
 Clone the repository:
 
 ```bash
-git clone <repo-url> ncs-docker-workspace
+git clone <repo-url> 
 cd ncs-docker-workspace
 ```
 
